@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ziyan Yu</title>
+  <meta name="description" content="Ziyan Yu, computer science undergraduate at Peking University. Research in robot learning and reliable manipulation.">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #111; font: 14px/1.45 Arial, Helvetica, sans-serif; }
+    main { max-width: 800px; margin: 30px auto 45px; }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover { color: #bc6300; text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #1772d0; outline-offset: 3px; }
+    h1 { margin: 0 0 18px; font-size: 30px; font-weight: 400; text-align: center; }
+    h2 { font-size: 23px; font-weight: 400; margin: 28px 0 14px; }
+    p { margin: 0 0 13px; }
+    .intro { display: grid; grid-template-columns: 1fr 175px; gap: 35px; align-items: center; padding: 10px 20px 18px; }
+    .portrait { width: 175px; height: 216px; object-fit: cover; object-position: center 30%; display: block; }
+    .contact { text-align: center; margin: 14px 0 0; }
+    section { padding: 0 20px; }
+    .note { font-size: 12px; color: #555; margin: -5px 0 0; }
+    .paper { display: grid; grid-template-columns: 190px 1fr; gap: 30px; align-items: center; padding: 23px 0; }
+    .paper-image { width: 190px; height: auto; display: block; }
+    .paper h3 { font-size: 14px; line-height: 1.4; margin: 0; font-weight: 700; }
+    .authors, .paper-links, .venue { margin: 2px 0 0; }
+    .venue { font-style: italic; }
+    .highlight { color: #b12823; font-weight: 700; }
+    .description { margin: 10px 0 0; }
+    .experience, .honors { padding-left: 20px; margin: 0; }
+    .experience li, .honors li { margin-bottom: 9px; }
+    .experience p { margin: 2px 0 0; }
+    .date { color: #555; }
+    .skip { position: absolute; top: -100px; left: 12px; background: white; padding: 8px; }
+    .skip:focus { top: 8px; }
+    @media (max-width: 600px) {
+      main { margin-top: 20px; }
+      .intro { display: flex; flex-direction: column-reverse; gap: 20px; padding: 0 20px 10px; }
+      .portrait { width: 125px; height: 154px; }
+      h1 { font-size: 27px; margin-bottom: 15px; }
+      .paper { grid-template-columns: 1fr; gap: 13px; padding: 20px 0; }
+      .paper-image { width: min(100%, 300px); }
+      h2 { margin-top: 25px; }
+    }
+    @media print { main { margin: 0; } .paper { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+  <header class="intro">
+    <div>
+      <h1>Ziyan Yu</h1>
+      <p>I am an undergraduate student in the Turing Class at <a href="https://english.pku.edu.cn/">Peking University</a>, studying Computer Science and expecting to graduate in 2027.</p>
+      <p>I work with Prof. Hao Dong at the PKU-Agibot Lab. My research interests include robot learning, reliable manipulation, and predictive models for robot control. My work spans structured data generation, policy evaluation, and real-robot deployment.</p>
+      <p class="contact"><a href="mailto:2300013079@stu.pku.edu.cn">Email</a> (2300013079@stu.pku.edu.cn)</p>
+    </div>
+    <img class="portrait" src="images/ziyan-yu.jpg" alt="Ziyan Yu" width="175" height="216">
+  </header>
+  <section aria-labelledby="publications">
+    <h2 id="publications">Publications</h2>
+    <p class="note">* Equal contribution.</p>
+    <article class="paper">
+      <a href="https://arxiv.org/abs/2608.15863" aria-label="AppliancePlan paper"><img class="paper-image" src="images/applianceplan.png" alt="AppliancePlan operating household appliances and adjusting plans after disturbances" width="756" height="404"></a>
+      <div>
+        <h3><a href="https://arxiv.org/abs/2608.15863">Scaling Manual-Grounded Appliance Manipulation with Data Synthesis and Unified Planning</a></h3>
+        <p class="authors">Yuxing Long*, Lei Kang*, <strong>Ziyan Yu</strong>, Yuzheng Gao, Bin Cheng, Jiyao Zhang, Xiaoqi Li, Haolin Yang, Dongjiang Li, Hui Shen, Hao Dong</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2608.15863">arXiv</a></p>
+        <p class="venue"><strong>ACM Multimedia 2026</strong></p>
+        <p class="description">We use appliance manuals to generate structured training data for part grounding, long-horizon planning, and plan adjustment.</p>
+      </div>
+    </article>
+    <article class="paper">
+      <a href="https://realappliance.github.io/" aria-label="RealAppliance project"><img class="paper-image" src="images/realappliance.png" alt="RealAppliance assets with manual-aligned physical and electronic behavior" width="674" height="374"></a>
+      <div>
+        <h3><a href="https://realappliance.github.io/">RealAppliance: Let High-fidelity Appliance Assets Controllable and Workable as Aligned Real Manuals</a></h3>
+        <p class="authors">Yuzheng Gao*, Yuxing Long*, Lei Kang, Yuchong Guo, <strong>Ziyan Yu</strong>, Shangqing Mao, Jiyao Zhang, Ruihai Wu, Dongjiang Li, Hui Shen, Hao Dong</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2512.00287">arXiv</a> / <a href="https://realappliance.github.io/">Project Page</a></p>
+        <p class="venue"><strong>CVPR 2026</strong>, <span class="highlight">Highlight</span></p>
+        <p class="description">We build 100 manual-aligned appliance assets across 14 categories to evaluate appliance understanding and manipulation planning.</p>
+      </div>
+    </article>
+    <article class="paper">
+      <a href="https://navspace.github.io/" aria-label="NavSpace project"><img class="paper-image" src="images/navspace.png" alt="NavSpace examples of spatial instructions in everyday navigation" width="581" height="206"></a>
+      <div>
+        <h3><a href="https://navspace.github.io/">NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions</a></h3>
+        <p class="authors">Haolin Yang*, Yuxing Long*, Zhuoyuan Yu, Zihan Yang, Minghan Wang, Jiapeng Xu, Yihan Wang, <strong>Ziyan Yu</strong>, Wenzhe Cai, Lei Kang, Hao Dong</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2510.08173">arXiv</a> / <a href="https://navspace.github.io/">Project Page</a></p>
+        <p class="venue"><strong>ICRA 2026</strong></p>
+        <p class="description">We evaluate spatial instruction following with 1,228 trajectory-instruction pairs and 22 navigation agents.</p>
+      </div>
+    </article>
+  </section>
+  <section aria-labelledby="experience">
+    <h2 id="experience">Research Experience</h2>
+    <ul class="experience">
+      <li><strong>PKU-Agibot Lab</strong>, Peking University <span class="date">(June 2025 - Present)</span><p>Advisor: Prof. Hao Dong. Robot learning and real-robot evaluation.</p></li>
+      <li><strong>Intelligent Graphics Computing Lab</strong>, Peking University <span class="date">(July 2026 - Present)</span><p>Advisor: Prof. Zhouhui Lian. Flow matching and discriminator models.</p></li>
+      <li><strong>Camera Intelligence Lab</strong>, Peking University <span class="date">(February - June 2025)</span><p>Advisor: Prof. Boxin Shi. Virtual bokeh and low-light image restoration.</p></li>
+    </ul>
+  </section>
+  <section aria-labelledby="honors">
+    <h2 id="honors">Honors</h2>
+    <ul class="honors">
+      <li>2026: PKU Outstanding Research Award</li>
+      <li>2026: PKU Zhang Naixin Scholarship</li>
+      <li>2024: John Hopcroft Scholarship</li>
+      <li>2023: PKU EECS Dean's Scholarship for Incoming Undergraduates</li>
+      <li>2023: PKU Freshman Scholarship</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
+
