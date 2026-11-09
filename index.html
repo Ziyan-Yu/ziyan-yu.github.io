@@ -8,40 +8,48 @@
   <meta name="theme-color" content="#ffffff">
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; background: #fff; color: #111; font: 14px/1.45 Arial, Helvetica, sans-serif; }
-    main { max-width: 800px; margin: 30px auto 45px; }
-    a { color: #1772d0; text-decoration: none; }
-    a:hover { color: #bc6300; text-decoration: underline; }
-    a:focus-visible { outline: 2px solid #1772d0; outline-offset: 3px; }
-    h1 { margin: 0 0 18px; font-size: 30px; font-weight: 400; text-align: center; }
-    h2 { font-size: 23px; font-weight: 400; margin: 28px 0 14px; }
-    p { margin: 0 0 13px; }
-    .intro { display: grid; grid-template-columns: 1fr 175px; gap: 35px; align-items: center; padding: 10px 20px 18px; }
-    .portrait { width: 175px; height: 216px; object-fit: cover; object-position: center 30%; display: block; }
-    .contact { text-align: center; margin: 14px 0 0; }
-    section { padding: 0 20px; }
-    .note { font-size: 12px; color: #555; margin: -5px 0 0; }
-    .paper { display: grid; grid-template-columns: 190px 1fr; gap: 30px; align-items: center; padding: 23px 0; }
-    .paper-image { width: 190px; height: auto; display: block; }
-    .paper h3 { font-size: 14px; line-height: 1.4; margin: 0; font-weight: 700; }
-    .authors, .paper-links, .venue { margin: 2px 0 0; }
-    .venue { font-style: italic; }
-    .highlight { color: #b12823; font-weight: 700; }
-    .description { margin: 10px 0 0; }
-    .experience, .honors { padding-left: 20px; margin: 0; }
-    .experience li, .honors li { margin-bottom: 9px; }
-    .experience p { margin: 2px 0 0; }
-    .date { color: #555; }
+    body { margin: 0; background: #fff; color: #252525; font: 14px/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; }
+    main { max-width: 860px; padding: 0 28px; margin: 48px auto 28px; }
+    a { color: #365d83; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #365d83; outline-offset: 3px; }
+    h1 { margin: 0 0 13px; font-size: 28px; font-weight: 600; line-height: 1.2; }
+    h2 { font-size: 18px; font-weight: 600; margin: 0 0 17px; }
+    p { margin: 0 0 11px; }
+    .intro { display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 28px; align-items: start; padding-bottom: 28px; }
+    .portrait { width: 124px; height: 153px; object-fit: cover; object-position: center 30%; display: block; }
+    .contact { margin: 13px 0 0; font-size: 13px; }
+    section { border-top: 1px solid #dedede; padding-top: 23px; margin-top: 8px; }
+    .note { font-size: 12px; color: #6b6b6b; margin: -11px 0 0; }
+    .paper { display: grid; grid-template-columns: minmax(0, 1fr) 155px; gap: 28px; align-items: center; padding: 23px 0; }
+    .paper + .paper { border-top: 1px solid #ededed; }
+    .paper > a { grid-column: 2; grid-row: 1; }
+    .paper > div { grid-column: 1; grid-row: 1; }
+    .paper-image { width: 155px; height: auto; display: block; }
+    .paper h3 { font-size: 15px; line-height: 1.45; margin: 0 0 6px; font-weight: 600; }
+    .paper h3 a { color: #202020; }
+    .authors { color: #626262; font-size: 13px; margin: 0 0 5px; }
+    .authors strong { color: #252525; }
+    .paper-links { font-size: 13px; margin: 3px 0 0; }
+    .venue { font-size: 12px; margin: 0 0 6px; color: #555; }
+    .highlight { color: #8b4038; font-weight: 600; }
+    .description { margin: 9px 0 7px; font-size: 13px; }
+    .experience, .honors { padding-left: 18px; margin: 0 0 22px; }
+    .experience li, .honors li { margin-bottom: 7px; }
+    .experience p { margin: 2px 0 0; color: #626262; font-size: 13px; }
+    .date { color: #626262; font-size: 13px; }
+    footer { border-top: 1px solid #dedede; margin-top: 30px; padding-top: 14px; font-size: 12px; color: #737373; }
     .skip { position: absolute; top: -100px; left: 12px; background: white; padding: 8px; }
     .skip:focus { top: 8px; }
     @media (max-width: 600px) {
-      main { margin-top: 20px; }
-      .intro { display: flex; flex-direction: column-reverse; gap: 20px; padding: 0 20px 10px; }
-      .portrait { width: 125px; height: 154px; }
-      h1 { font-size: 27px; margin-bottom: 15px; }
-      .paper { grid-template-columns: 1fr; gap: 13px; padding: 20px 0; }
-      .paper-image { width: min(100%, 300px); }
-      h2 { margin-top: 25px; }
+      main { margin-top: 26px; padding: 0 22px; }
+      .intro { grid-template-columns: 1fr; gap: 18px; padding-bottom: 24px; }
+      .portrait { width: 100px; height: 123px; }
+      h1 { font-size: 26px; }
+      .paper { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; }
+      .paper > div { grid-column: 1; grid-row: 1; }
+      .paper > a { grid-column: 1; grid-row: 2; }
+      .paper-image { width: min(100%, 230px); }
     }
     @media print { main { margin: 0; } .paper { break-inside: avoid; } }
   </style>
@@ -50,13 +58,13 @@
 <a class="skip" href="#main">Skip to content</a>
 <main id="main">
   <header class="intro">
+    <img class="portrait" src="images/ziyan-yu.jpg" alt="Ziyan Yu" width="124" height="153">
     <div>
       <h1>Ziyan Yu</h1>
       <p>I am an undergraduate student in the Turing Class at <a href="https://english.pku.edu.cn/">Peking University</a>, studying Computer Science and expecting to graduate in 2027.</p>
       <p>I work with Prof. Hao Dong at the PKU-Agibot Lab. My research interests include robot learning, reliable manipulation, and predictive models for robot control.</p>
       <p class="contact"><a href="mailto:yuziyan2023@stu.pku.edu.cn">Email</a> (yuziyan2023@stu.pku.edu.cn)</p>
     </div>
-    <img class="portrait" src="images/ziyan-yu.jpg" alt="Ziyan Yu" width="175" height="216">
   </header>
   <section aria-labelledby="publications">
     <h2 id="publications">Publications</h2>
@@ -64,31 +72,31 @@
     <article class="paper">
       <a href="https://arxiv.org/abs/2608.15863" aria-label="AppliancePlan paper"><img class="paper-image" src="images/applianceplan.png" alt="AppliancePlan operating household appliances and adjusting plans after disturbances" width="756" height="404"></a>
       <div>
+        <p class="venue"><strong>ACM Multimedia 2026</strong></p>
         <h3><a href="https://arxiv.org/abs/2608.15863">Scaling Manual-Grounded Appliance Manipulation with Data Synthesis and Unified Planning</a></h3>
         <p class="authors">Yuxing Long*, Lei Kang*, <strong>Ziyan Yu</strong>, Yuzheng Gao, Bin Cheng, Jiyao Zhang, Xiaoqi Li, Haolin Yang, Dongjiang Li, Hui Shen, Hao Dong</p>
-        <p class="paper-links"><a href="https://arxiv.org/abs/2608.15863">arXiv</a></p>
-        <p class="venue"><strong>ACM Multimedia 2026</strong></p>
         <p class="description">We use appliance manuals to generate structured training data for part grounding, long-horizon planning, and plan adjustment.</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2608.15863">arXiv</a></p>
       </div>
     </article>
     <article class="paper">
       <a href="https://realappliance.github.io/" aria-label="RealAppliance project"><img class="paper-image" src="images/realappliance.png" alt="RealAppliance assets with manual-aligned physical and electronic behavior" width="674" height="374"></a>
       <div>
+        <p class="venue"><strong>CVPR 2026</strong>, <span class="highlight">Highlight</span></p>
         <h3><a href="https://realappliance.github.io/">RealAppliance: Let High-fidelity Appliance Assets Controllable and Workable as Aligned Real Manuals</a></h3>
         <p class="authors">Yuzheng Gao*, Yuxing Long*, Lei Kang, Yuchong Guo, <strong>Ziyan Yu</strong>, Shangqing Mao, Jiyao Zhang, Ruihai Wu, Dongjiang Li, Hui Shen, Hao Dong</p>
-        <p class="paper-links"><a href="https://arxiv.org/abs/2512.00287">arXiv</a> / <a href="https://realappliance.github.io/">Project Page</a></p>
-        <p class="venue"><strong>CVPR 2026</strong>, <span class="highlight">Highlight</span></p>
         <p class="description">We build 100 manual-aligned appliance assets across 14 categories to evaluate appliance understanding and manipulation planning.</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2512.00287">arXiv</a> / <a href="https://realappliance.github.io/">Project Page</a></p>
       </div>
     </article>
     <article class="paper">
       <a href="https://navspace.github.io/" aria-label="NavSpace project"><img class="paper-image" src="images/navspace.png" alt="NavSpace examples of spatial instructions in everyday navigation" width="581" height="206"></a>
       <div>
+        <p class="venue"><strong>ICRA 2026</strong></p>
         <h3><a href="https://navspace.github.io/">NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions</a></h3>
         <p class="authors">Haolin Yang*, Yuxing Long*, Zhuoyuan Yu, Zihan Yang, Minghan Wang, Jiapeng Xu, Yihan Wang, <strong>Ziyan Yu</strong>, Wenzhe Cai, Lei Kang, Hao Dong</p>
-        <p class="paper-links"><a href="https://arxiv.org/abs/2510.08173">arXiv</a> / <a href="https://navspace.github.io/">Project Page</a></p>
-        <p class="venue"><strong>ICRA 2026</strong></p>
         <p class="description">We evaluate spatial instruction following with 1,228 trajectory-instruction pairs and 22 navigation agents.</p>
+        <p class="paper-links"><a href="https://arxiv.org/abs/2510.08173">arXiv</a> / <a href="https://navspace.github.io/">Project Page</a></p>
       </div>
     </article>
   </section>
@@ -109,8 +117,7 @@
       <li>2023: PKU Freshman Scholarship</li>
     </ul>
   </section>
+  <footer>&copy; 2026 Ziyan Yu</footer>
 </main>
 </body>
 </html>
-
-
